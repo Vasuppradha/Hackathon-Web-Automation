@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ZigWheels Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Chrome Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="switchToGoogleWindow"/>
+          <include name="clickNextBtn"/>
+          <include name="setup"/>
+          <include name="clickLoginIcon"/>
+          <include name="checkWindowHeading"/>
+          <include name="clickGoogleBtn"/>
+          <include name="takeScreenShot"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Chrome Tests(failed) -->
+  <test thread-count="5" name="Edge Tests(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="tests.UsedCarsTest">
+        <methods>
+          <include name="selectLocation"/>
+          <include name="setup"/>
+          <include name="getCarList"/>
+          <include name="scrollToPopularModels"/>
+          <include name="navToUsedCarsPage"/>
+          <include name="closeBrowser"/>
+          <include name="selectAllModels"/>
+        </methods>
+      </class> <!-- tests.UsedCarsTest -->
+    </classes>
+  </test> <!-- Edge Tests(failed) -->
+</suite> <!-- Failed suite [ZigWheels Suite] -->
